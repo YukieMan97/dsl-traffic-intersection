@@ -1,0 +1,27 @@
+INTERSECTION ::= “Intersection {” ROAD-LIST “,” LIGHTS “}”
+
+ROAD-LIST ::= “Road-List {” ROAD “,” ROAD “,” ROAD “,” ROAD “}”
+LIGHTS ::= “Lights {” LOOP “}”
+
+ROAD ::= “Road ” DIRECTION “ {” LANE (“,” LANE)+ (“,” CROSSWALK)? “}”
+LANE ::= ENTRY-LANE | EXIT-LANE
+ENTRY-LANE ::= “entry-lane ” NUM “ {” DIRECTIONS-LIST “,” VEHICLE-LIST “,” LOOP “}”
+EXIT-LANE ::= “exit-lane ” NUM
+
+DIRECTIONS-LIST ::= “[” DIRECTION (“,” DIRECTION)* “]”
+DIRECTION ::= “N” | “E” | “S” | “W”
+VEHICLES-LIST ::= “[” VEHICLE (“,” VEHICLE)* “]”
+VEHICLE ::= “cars” | “buses” | “trucks” | “bikes” | “all”
+
+LOOP ::= SINGLE-LOOP | STATE-LOOP
+SINGLE LOOP ::= “Loop {” DURATION “}”
+STATE-LOOP ::= “Loop states {“ STATE (“,” STATE)* “}”
+DURATION ::= “duration: ” DECIMAL
+
+STATE ::= “state {” STATE-CONFIG “,” DURATION “}”
+STATE-CONFIG ::= GREEN-ROADS “,” RED-ROADS
+GREEN-ROADS ::= “green-roads: “ DIRECTIONS-LIST
+RED-ROADS ::= “red-roads: “     DIRECTIONS-LIST
+
+DECIMAL ::= NUM (“.” NUM)?
+NUM ::= [0-9]+

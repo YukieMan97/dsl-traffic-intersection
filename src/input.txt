@@ -1,0 +1,2 @@
+Intersection {Road-List {Road N{entry-lane 2 {[S],[all],Loop {duration: 10.2}},entry-lane 3 {[S],[all],Loop {duration: 10.2}},exit-lane 8,exit-lane 9},Road E{entry-lane 2 {[N,W],[all],Loop {duration: 10.2}},entry-lane 3 {[W],[all],Loop {duration: 10.2}},exit-lane 6,exit-lane 7},Road S{entry-lane 2 {[N,E],[all],Loop {duration: 10.2}},exit-lane 4},Road W{entry-lane 2 {[S,E],[all],Loop {duration: 10.2}},exit-lane 3}},Lights {Loop {duration: 1.0}}}
+

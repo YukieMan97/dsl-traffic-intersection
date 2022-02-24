@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Tokenization">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src/Main/Tokenization" />
+      <root url="file://$PROJECT_DIR$/src/Test" />
+    </SOURCES>
+  </library>
+</component>
